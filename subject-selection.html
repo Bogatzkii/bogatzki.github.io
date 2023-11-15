@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unsere Themen</title>
+  <style>
+    
+    body {
+      background-color: #fff;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #333;
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .subject-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+      opacity: 0;
+      transform: translateX(-100px);
+      animation: slide-in 0.5s ease-in-out forwards;
+    }
+    
+    @keyframes slide-in {
+      0% {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    .subject-card {
+      width: 300px;
+      height: 200px;
+      margin: 0 10px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      border: 8px solid transparent;
+      box-sizing: border-box; 
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      animation: color-transition 6s infinite linear;
+    }
+    
+    .subject-card.active {
+      transform: scale(1.1); 
+      border-color: #FF00FF; 
+    }
+    
+    .subject-card:not(.active) {
+      opacity: 0.7;
+      transform: scale(0.9); 
+    }
+    
+    .subject-card:hover {
+      background-color: #ccc;
+      animation: wiggle 0.3s infinite ease-in-out;
+      border: 8px solid;
+      transform: scale(1.1);
+      box-shadow: none;
+    }
+    
+    .subject-card:not(:hover) {
+      
+      opacity: 0.7;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+    
+    @keyframes wiggle {
+      0% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(-0.5deg);
+      }
+      75% {
+        transform: rotate(0.5deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    @keyframes color-transition {
+      0% {
+        border-color: #FF00FF;
+      }
+      50%    {
+        border-color: #00FFFF;
+      }
+      100% {
+        border-color: #FF00FF;
+      }
+    }
+    
+    .subject-card:hover h2 {
+      color: #333;
+    }
+    
+    .subject-card h2 {
+      color: #777;
+      font-size: 20px;
+      text-decoration: none;
+    }
+    
+    .fade-out {
+      opacity: 0;
+      animation: fade-out 0.5s ease-in-out forwards;
+    }
+    
+    @keyframes fade-out {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    
+    
+    .subject-card::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .subject-card:hover::after {
+      opacity: 0.5;
+    }
+    
+    
+    .subject-card[data-subject="subject1"]::after {
+      background-image: url('https://www.schaffrath.de/fileadmin/_processed_/4/3/csm_AdobeStock_284764344_03d7c5d7f4.jpeg');
+    }
+    
+    .subject-card[data-subject="subject2"]::after {
+      background-image: url('https://www.reisevor9.de/var/site/storage/images/_aliases/article_16x9/2/7/2/0/1490272-1-ger-DE/Social%20Media%20Icons%20W%C3%BCrfel%20Foto%20iStock%20pressureUA.jpg');
+    }
+    
+    .subject-card[data-subject="subject3"]::after {
+      background-image: url('https://nbpsblog.b-cdn.net/wp-content/uploads/2022/06/Was-ist-Virtual-Reality-VR.jpg');
+    }
+
+    
+    #tsparticles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    
+    #background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      background-image: linear-gradient(to bottom right, purple, pink, cyan, purple);
+      background-size: 300% 300%;
+      -webkit-animation: Animation 20s ease infinite;
+      -moz-animation: Animation 20s ease infinite;
+      animation: Animation 20s ease infinite;
+    }
+
+    @-webkit-keyframes Animation {
+      0%{background-position:10% 0%}
+      50%{background-position:91% 100%}
+      100%{background-position:10% 0%}
+    }
+    @-moz-keyframes Animation {
+      0%{background-position:10% 0%}
+      50%{background-position:91% 100%}
+      100%{background-position:10% 0%}
+    }
+    @keyframes Animation { 
+      0%{background-position:10% 0%}
+      50%{background-position:91% 100%}
+      100%{background-position:10% 0%}
+    }
+  </style>
+</head>
+<body>
+  <div id="background"></div>
+  <div id="tsparticles"></div>
+
+  <h1>Unsere Themen</h1>
+  
+  <div class="subject-container">
+    <a href="subject1.html" class="subject-card" data-subject="subject1">
+      <h2>Webdesign</h2>
+    </a>
+    <a href="subject2.html" class="subject-card" data-subject="subject2">
+      <h2>Social Media</h2>
+    </a>
+    <a href="subject3.html" class="subject-card" data-subject="subject3">
+      <h2>Virtual Reality</h2>
+    </a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.28.0"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        
+        var subjectTitle = document.querySelector('h1');
+        subjectTitle.style.opacity = '0';
+        setTimeout(function() {
+            subjectTitle.style.opacity = '1';
+            subjectTitle.style.transition = 'opacity 1s ease-in-out';
+        }, 100);
+});
+    document.addEventListener('DOMContentLoaded', function () {
+    
+      particlesJS('tsparticles', {
+        particles: {
+          number: {
+            value: 50,
+            density: {
+              enable: true,
+              value_area: 800,
+            },
+          },
+          color: {
+            value: ['#FF00FF', '#00FFFF'],
+          },
+          shape: {
+            type: 'circle',
+          },
+          opacity: {
+            value: 0.8,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false,
+            },
+          },
+          size: {
+            value: 5,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 2,
+              size_min: 0.1,
+              sync: false,
+            },
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: 'none',
+            random: true,
+            straight: false,
+            out_mode: 'out',
+            bounce: false,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200,
+            },
+          },
+        },
+        interactivity: {
+          detect_on: 'canvas',
+          events: {
+            onhover: {
+              enable: false,
+            },
+            onclick: {
+              enable: false,
+            },
+            resize: true,
+          },
+        },
+        retina_detect: true,
+      });
+
+      
+      var subjectCards = document.querySelectorAll('.subject-card');
+
+      subjectCards.forEach(function (card) {
+        card.addEventListener('mouseover', function () {
+          subjectCards.forEach(function (c) {
+            if (c !== card) {
+              c.style.opacity = '0.7';
+              c.style.transform = 'scale(0.9)';
+              c.style.boxShadow = '0 1px 2px rgba(0, 0, 0, 0.2)';
+            }
+          });
+
+          card.style.opacity = '1';
+          card.style.transform = 'scale(1.1)';
+          card.style.boxShadow = 'none';
+        });
+
+        card.addEventListener('mouseout', function () {
+          subjectCards.forEach(function (c) {
+            if (c !== card) {
+              c.style.opacity = '0.7';
+              c.style.transform = 'scale(0.9)';
+              c.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.3)';
+            }
+          });
+
+          card.style.opacity = '0.7';
+          card.style.transform = 'scale(0.9)';
+          card.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.3)';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

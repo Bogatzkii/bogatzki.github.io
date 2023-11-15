@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Subject 1</title>
+  <style>
+    body {
+      background-color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      opacity: 0;
+      animation: fade-in 0.5s ease-in-out forwards;
+    }
+    
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+
+    }
+    header {
+      position: relative;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      background: linear-gradient(45deg, purple, pink, cyan);
+      animation: gradient-animation 10s ease infinite;
+      background-size: 300% 300%;
+    }
+
+    h1 {
+      font-family: "Arial", Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 40px 0;
+      color: #fff;
+    }
+    
+    p {
+      font-size: 15px;
+      line-height: 1.5;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .return-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      font-size: 14px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+    
+    .return-button:hover {
+      background-color: #555;
+    }
+    
+    .fade-in {
+      opacity: 0;
+      animation: fade-in 0.5s ease-in-out forwards;
+    }
+
+    .columns-container {
+      column-count: 2;
+      column-gap: 40px;
+      font-family: "Arial"
+    }
+
+    .banner {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 18px;
+    }
+    
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    @keyframes gradient-animation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Webdesign</h1>
+    <div class="banner"></div>
+  </header>
+  
+  <p>
+    <span style="font-size: 17px; font-family: 'Open Sans', sans-serif;">
+      Name: Thorben Vetter (BA Sozialwissenschaften, 1. Semester) 28.05.23<br>
+      Vorlesung: Digitale Medien<br>
+      Dozent: Dr.-Ing. Marcel Götze<br>
+      Thema: Webdesign
+    </span>
+  </p>
+
+  <a href="subject-selection.html" class="return-button">Return</a>
+
+<div class="columns-container">
+  <p>
+    Ob auf der Arbeit oder in unserer Freizeit, das Internet begleitet uns heutzutage überall. Es gibt
+nahezu keine Berufe wo das Internet nicht, in irgendeiner Art und Weise, genutzt wird. Während wir
+das Internet nun also nach Informationen durchstöbern, fällt schnell auf, dass wir gewisse Internetseiten gegenüber anderem bevorzugen. Aber woran kann diese Bevorzugung liegen? Hier kommt
+auch schon das Hauptthema dieses Textes zum Vorschein, das Webdesign. Ich möchte mich dabei
+besonders auf Webseiten konzentrieren, welche zur Nachrichtenverbreitung dienen, wie zum Beispiel die Tagesschau, Welt, Spiegel oder auch der Bild. Dabei möchte ich im Vorhinein erwähnen,
+dass Vergleiche oder Beispiele aus meinen Erfahrungen / Sicht entspringen und somit zu anderen
+Personen variieren können.
+  </p>
+
+  <p>
+    Aber erstmal zu der Frage, was ist eigentlich Webdesign? Webdesign kann man grundlegend als die
+grafische Darstellung von Webseiten jeglicher Art betrachten, grundlegende Beispiele sind Bilder,
+Farben, Auslegungen welche wir auf Webseiten sehen. Dabei wird das Design, Farben, Auslegung
+etc. oftmals an der Zielgruppe der Webseite festgelegt. Aufführbare Beispiele zwecks der Farben
+wären Webseiten von Krankenhäusern, indem durch die Benutzung von Blauen und Weiß eine Sterilität und Reinheit vermittelt wird, was zugleich auch Vertrauen ausstrahlt.
+  </p>
+
+  <p>
+    Anfangs möchte ich jedoch erstmal auf Eigenschaften eingehen, welche als negativ im Webdesign
+angesehen werden. Diese negativen Eigenschaften nennt man auch Usability-Probleme. UsabilityProbleme zeichnen sich durch generelle Unverständlichkeit der Webseite aus, dies kann durch fehlende Navigationsleisten, unverständliche Menüs / Icons, langen unübersichtlichen Texten sowie
+nicht klar angezeigten Links, hervorgerufen werden. Ein Negativbeispiel stellt für mich die Startseite
+der Bild dar, welche man über den PC aufrufen kann. Aufgrund der schieren Masse von Bildern, die
+häufige Verwendung von Rot oder auch Werbung füllt man sich geradezu erschlagen und verliert
+schnell den Überblick. Auch ziehen durchschaltende Bilder, Video Einspielungen und eine Masse an
+Schlagzeilen schnell den Fokus von den eigentlichen Webseiten Besuch ab. Dies sind unter anderem Gründe, warum besonders bei mir, aber auch anderen Studenten Bild.de nicht als verlässliche
+Nachrichtenquelle gesehen wird. Das genaue Gegenteil zu Bild.de stellt in meinen Augen die Tagesschau dar. Durch das blaue Farbschema wird die Webseite seriös und vertraulich, des Weiteren gibt
+es keine schnellen Bildeinspielungen oder aufspringende Werbungen, welche den eigentlichen Fokus des Webseitenbesuch auf sich ziehen. Dies sind eine kleine Anzahl an Gründen, warum ich
+sowie mein Umkreis in der Universität, aber auch familiär die Tagesschau eher der Bild vorziehen.
+  </p>
+
+  <p>
+    Führt man den Vergleich zwischen der Bild und der Tagesschau fort, so müssen sich auch Gedanken
+über die Zielgruppen dieser Webseiten gemacht werden und wie sie auf diese abzielen. Dabei kommt
+ein weiterer grundlegender Baustein für das Webdesign zum Vorschein, das User Centered Design.
+Das User Centered Design dient generell zur Ermittlung der Zielgruppe, welche die Webseite nutzen
+sollen, ein perfektes Beispiel dafür stellt Instagram dar, welche die Ihre Farbenpracht und simpelheit besonders für Jugendliche und junge Erwachsene ansprechend ist. Bevor nun also eine Webseite erstellt wird, stellt das User Centered Design zentrale Fragen, um die Zielgruppe / Nutzer herauszufinden wie, was die Nutzer für ein Geschlecht, Alter, Beziehungsstatus haben, wie man eine
+Bindung zu den Nutzern aufbauen kann, wie man Nutzer durch Interaktion länger an die Seite binden
+kann, welche Design Elemente die Nutzer bevorzugen etc. Generell ist es schwer sich nur auf eine
+Zielgruppe auszurichten, weshalb das Anbieten von Alternativen, wie beispielsweise im Navigationsbereich, Sinn ergeben kann. Nimmt man sich soeben also nochmal die Bild und die Tagesschau zum
+Vergleich hervor, so merkt man schnell, dass diese für unterschiedliche Zielgruppen ausgelegt sind.
+Die Tagesschau ist mit ihrer Übersichtlichkeit gut für Leute geeignet, welche schnell bestimmten
+Nachrichten finden wollen, bietet jedoch häufig auch weitere Möglichkeiten, um sich mit dem Thema
+der Nachricht tiefer auseinander zu setzen. Dadurch kann die Tagesschau eine große Anzahl von
+Nutzern abgreifen, welche von Jungen, Erwachsenen im Gymnasium bis hin zu Rentnern reicht. Die
+Bild scheint sich hingegen eher auf eine simple Nachrichtenerstattung zu konzentrieren, bei der häufig keine Vertiefung des Themas ermöglicht wird. Dabei fällt auf, dass sich stark auf gute Schlagzeilen statt auf qualitative Nachrichten konzentriert wird, was sich besonders durch Unfallberichte und
+Promi Nachrichten abzeichnet. Jedoch bietet die Bild eine extreme Auswahl von Nachrichten an,
+was es der Bild ermöglicht ihre Nutzer lange an ihre Webseite zu binden. Wobei im Gymnasium und
+jetzt in der Universität eher Nachrichten aus der Tagesschau Thema waren und sind, ist die Bild
+besonders bei älteren Leuten im Rentenalter und in der Sekundarschule eher eine Informationsquelle.
+  </p>
+
+  <p>
+    Nachdem nun also bekannt ist, was grob vermieden werden soll und was seine Zielgruppe ist, kommt
+man auch schon bei dem eigentlichen Webseitendesign an. Das Webseitendesign ist sehr umfangreich und besteht grundlegend aus der Organisation der Informationen, der Seitengestaltung / Layout, Navigation sowie der Farbe und Textgestaltung. Bei der Organisation von Informationen auf
+Webseiten kann man schnell Rückschlüsse zu seiner schulischen Laufbahn schließen, da die Grundlagen sehr den von Vorträgen ähneln. Grundlagen sind unter anderem, dass in Stichpunkten von 5
+bis 10 gearbeitet werden soll, somit wird eine Überfüllung der Seite und Überflutung an Informationen
+verhindert. Des Weiteren sollen Informationen in inhaltlich logischen Gruppen zusammengefasst
+werden, sodass Hierarchien / Gliederungen erstellt werden können. Auch sollen Verbindungen zwischen den Themen zur besseren Verständlichkeit geschaffen werde. Natürlich darf die ästhetische
+Wirkung der Informationen nicht vernachlässigt werden, sodass besondere Informationen hervorgehoben werden können. Bei der Organisation von Informationen findet man schnell 3 Arten der Informationsdarstellung, dieses bestehen aus dem Sequenziellen-, Hierarchischen- und Netzstrukturellen Strukturierung der Informationen. Betrachtet man nun die Sequenzielle Strukturierung, erkennt
+man das diese sich durch Chronologische und logische folgen von Themen sowie der Aufteilung von
+allgemeinen Informationen zu speziellen / besonderen Informationen auszeichnet, wird dadurch
+auch als einfachste Art der Strukturierung betrachtet. Als Beispiele lassen sich Einträge in Wikipedia
+aufführen. Die hierarchische Strukturierung wird derweil für das einfache Verständnis von meist realen Strukturen in Institutionen verwendet. Sie ist generell gut für komplexe Strukturen geeignet, weshalb man sie besonders auf Seiten die Bundesregierung anfinden kann. Netzstrukturen werden hingegen häufig für assoziative Organisationen genutzt und unterstützen dabei das freie Denken. Des
+Weiteren erlauben sie eine Verfolgung von Ideen, ohne dass Vorgaben gegeben werden, ein Beispiel
+ist in meinen Augen durch Twitter dargestellt.
+  </p>
+
+  <p>
+    Man kann die besten Informationen der Welt besitzen, jedoch werden diese kaum Aufmerksamkeit
+ohne eine vernünftige Seitengestaltung / Layout bekommen. Allgemein gilt, dass das Layout den
+eigentlichen Rahmen für die Informationen bildet und ihnen dabei eine besondere Wertigkeit zuteilt.
+Des Weiteren berücksichtigt das Layout besondere Designs, welche Firmen zustehen und ordnet
+Funktionen wie Menüelemente oder die Darstellung der derzeitigen Position auf der Webseite ein,
+sowie der logischen Anordnung von generell allen informationsbedingten Elementen. Auf Nachrichtenwebseiten bezogen würde sich dieses beispielsweise in Unterteilungen wie Inlands und Auslandsnachrichten oder Livetrackern verwirklichen. Die Seitengestaltung übernimmt nun die Aufgabe
+der Abgrenzung und Überschaubarkeit, sie sorgt also dafür, dass die Webseite auf so vielen Bildschirmarten wie möglich gut aussieht. Zuallererst kümmert sie sich über die richtige Darstellung der
+Webseite und verschiedenen Bildschirmauflösungen oder Bildschirmformaten, dazu zählt auch die
+richtige Darstellung in mobile Anwendungen. In Bezug auf die Nutzung der Webseite sorgt sie sich
+um die richtige Anordnung, welche dem Layout entspricht. Dabei achtet sie klar auf Trennungen von
+Navigationselementen und wirklichen Inhalt und unternimmt den Versuch, das Webdesign so barrierefrei wie möglich zu gestalten.
+  </p>
+
+  <p>
+    Die Farbgestaltung ist bei der Erstellung ein wesentlicher Faktor, er dient zur Wiedererkennung der
+Webseite, zur Wertevermittlung sowie zur generellen Verbesserung der Nutzbarkeit. Aufgrund von
+Komplementärfarben und anderen Aspekten, welche Farben beeinflussen, lassen sich starke Kontraste und somit auch Hervorhebungen gestalten. Dabei ist es besonders wichtig, eine gute Kombination zwischen Text auf Webseiten und deren Hintergrund zu gestalten. Da die Schrift gut und einfach erkennbar seien muss, sollten Farben gewählt werden, welche das Auge nicht zu sehr beanspruchen, wie schwarz und generell dunkle Farben. Des Weiteren, wie schon am Anfang des Textes
+kurzzeitig erwähnt wurde, können Farben für Werte stehen und somit Emotionen wecken oder auch
+manipulativ wirken. Farben haben also ein psychischer Einfluss auf uns. Dabei gilt grundlegend, dass dunkele Farben meist trauriger wirken als helle, auch muss man historische Konnotationen von Farben und deren Bedeutungen beachten, da sich dies bewusst oder unterbewusst auf die
+Psyche von Personen auswirken kann. Ein Beispiel wäre hier eine Webseite für Urlaubsreisen, diese
+arbeiten oft mit hellen Farben wie hellen Blau, Gelb oder auch einem kräftigen grün um natürliche Elemente zu verkörpern und Ruhe sowie Glück auszustrahlen.
+  </p>
+
+  <p>
+    Auch bei der Textgestaltung spielen die Art und die Anwendung eine große Rolle. So hat die Textgestaltung die Rolle, Informationen gut und übersichtlich darzustellen, kann diese jedoch auch direkt
+beeinflussen. Allgemein ist bei der Textgestaltung jedoch zu beachten, dass es Regeln der Typografie gibt, diese finden wir sowohl in unserer Schulzeit als auch, mit besonderer Wichtigkeit, in Schriftstücken für Universitätsarbeiten oder Büchern wieder. Bei der Textgestaltung sollte man auf kurze
+Texte setzen, da viele Personen meist nur überfliegend lesen und bei besonders bei komplexer Wortnutzung auf andere Webseiten mit leichterem Material wechseln. Allein durch die Nutzung von Absätzen, Hervorhebungen von markanten Informationen/Wörtern und Verzeichnisse mit Worterklärungen lässt sich das Lese / Webseitenerlebnis steigern. Besonders in der Tagesschau wird dieses
+System gut umgesetzt, sodass auch komplexe Themen einfacher aufgreifbar.
+  </p>
+
+  <p>
+    Generell gilt, dass die Navigation auf einer Internetseite klar und deutlich für Nutzer verständlich sein
+muss. Finden sich Nutzer nicht auf Internetseiten zurecht verlassen sie diese wieder, das bedeutet
+auch, dass Experimente mit Navigationselementen häufig nicht gut ankommen aufgrund der nicht
+gegebenen Intuitivität. Des Weiteren sollte eine Navigationsstruktur existieren, welche aus Primär,
+sekundär und Tertiärmenüs besteht, sodass Suchen schnell verfeinert werden können. Auch generische Funktionen wie eine Suchleiste sind dabei ein Muss sowie Interaktionselemente welche sich
+durch existierende Formulare auszeichnen können, wie beispielsweise direkt downloadbare BAföG Anträge oder Studiennachweise. Generell orientiert sich die Navigation daran, dass sie versucht
+schnell und gezielt den Benutzer an sein gewünschtes Ziel zu bringen, die Tagesschau setzt das
+unter anderem durch die Unterteilung der Nachrichten in Inland, Ausland, Wirtschaft etc. um. Des
+Weiteren sollten Navigationselemente, welche im Browser, wie Google Chrome oder Internet Explorer, aufzufinden sind, nicht behindert oder blockiert werden. Die Elemente des Vor und Zurückspringen, sowie das Aktualisieren von Webseiten, wird häufig von Personen über den Browser vorgenommen. Die Einschränkung dieser grundlegenden Funktionen könnte dadurch verwirrend oder abschreckend wirken, was den Verlust eines Nutzers mit sich führen könnte.
+  </p>
+
+  <p>
+    Möchte man den extra Schritt gehen, eröffnet sich die Möglichkeit des Anbietens von alternativen
+Darstellungen auf den Webseiten. Alternativen oder auch Raum für Individualisierungen sollen dabei dem Nutzer mehr Freiräume geben, um sich wohler zu fühlen. Das wahrscheinlich bekannteste
+Beispiel stellt dabei die Umstellung in den Dark-mode dar. Der Dark-mode zeichnet sich dadurch
+aus, die meisten Weißen / Hellen Elemente einer Webseite in Schwarz oder ähnliche Dunkle Farben
+umzuwandeln, mit dem Ziel der Entspannung des Auges. Betrachtet man nun den Individualisierungsraum springen einem sofort die Social-Media-Plattformen wie Twitter oder Instagram in den
+Kopf. Durch Anpassungen wie Profilbilder, Profilbanner, Beschreibungen etc. können Nutzer sich
+selbst ihre Profile gestalten, um sich im Endeffekt wohler zu fühlen oder Zugehörigkeiten auszudrücken. Diese Art der Personalisierung ist natürlich aufgrund des sozialen Aspekts auf Social-Media
+Seiten deutlich stärker vertreten als auf anderen Webseiten, so würde es für die Bild oder die Tagesschau wenig bis gar kein Sinn machen, diese Art von Individualität oder Interaktion anzubieten.
+  </p>
+</div>
+
+<div class="banner"></div>
+
+<body>
+  <p>
+</p>
+
+<p>
+</p>
+
+<p>
+</p>
+
+<p>
+</p>
+</div>
+</body>
+</body>
+  
+
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      document.body.classList.add('fade-in');
+    });
+  </script>
+</body>
+
+</html>

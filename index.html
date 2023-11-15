@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to My Website</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+  <style>
+    body {
+      background-image: url("background.jpg");
+      background-size: cover;
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      backdrop-filter: blur(5px);
+      background-color: rgba(255, 255, 255, 0.5);
+      z-index: 1;
+      position: relative;
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+    }
+    
+    .container.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      color: #333;
+      text-align: center;
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: fade-in 1s ease-in-out forwards;
+    }
+    
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    .enter-button {
+      display: inline-block;
+      padding: 10px 20px;
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      background: linear-gradient(45deg, #050f2c, #8a2be2, #FF69B4, #00FFFF);
+      background-size: 400% 400%;
+      animation: animateGradient 20s linear infinite;
+    }
+    
+    .enter-button:hover {
+      background-color: #FFD700;
+      transform: translateY(-5px);
+      animation: none;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    @keyframes animateGradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    
+    
+    #particles-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    
+    
+    @charset "UTF-8";
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    
+    .popup .popup-button {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1em;
+      text-transform: uppercase;
+      color: #fff;
+      border-radius: 6px;
+      margin: 10px;
+      padding: 1em 3em;
+      background-size: 300% 300%;
+      color: white;
+      box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+      background-image: linear-gradient(to right, #895cf2 0%, #ffabf4 50%, #895cf2 100%);
+      transition: 0.5s;
+    }
+    
+    .popup .popup-button:hover {
+      background-position: right center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Otto_von_Guericke_Universit%C3%A4t_Magdeburg_logo.svg/1199px-Otto_von_Guericke_Universit%C3%A4t_Magdeburg_logo.svg.png" alt="Logo" width="400px">
+    <h1>Webprojekt von Lena Wrobel, Thorben Vetter, Lukas Bogatzki <br>
+        Digitale Medien
+    </h1>
+    <a href="#" class="enter-button">Enter</a>
+  </div>
+
+  <div id="particles-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    document.querySelector('.enter-button').addEventListener('click', function(event) {
+      event.preventDefault();
+      const container = document.querySelector('.container');
+      container.classList.add('fade-out');
+
+      
+      particlesJS("particles-container", {
+        particles: {
+          number: {
+            value: 100,
+          },
+          color: {
+            value: ["#8a2be2", "#FF69B4", "#00FFFF"],
+          },
+          shape: {
+            type: "circle",
+          },
+          opacity: {
+            value: 0.8,
+          },
+          size: {
+            value: 4,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 3,
+              size_min: 0.1,
+              sync: false,
+            },
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200,
+            },
+          },
+        },
+        interactivity: {
+          events: {
+            onhover: {
+              enable: false,
+              mode: "repulse",
+            },
+            onclick: {
+              enable: false,
+              mode: "push",
+            },
+          },
+        },
+      });
+
+      
+      setTimeout(function () {
+        window.location.href = 'subject-selection.html';
+      }, 2000);
+    });
+  </script>  
+</body>
+</html>
